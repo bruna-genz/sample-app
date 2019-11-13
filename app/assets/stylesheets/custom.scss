@@ -175,3 +175,19 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend :invalid;
+  .form-control {
+    color: #E04F5D;
+    border: solid 1px #E04F5D;
+  }
+}
