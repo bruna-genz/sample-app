@@ -8,6 +8,8 @@ gem 'bootstrap'
 gem 'rails-controller-testing'
 gem 'faker'
 gem 'will_paginate'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
@@ -60,4 +62,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
   gem 'pg'
+  gem 'fog'
 end
