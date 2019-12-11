@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  include Pagy::Backend
   
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
@@ -10,11 +9,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @pagy, @users = pagy(User.all)
+    @users = User.all.paginate(page: params[:page])
   end
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def create

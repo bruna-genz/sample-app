@@ -7,7 +7,7 @@ ruby '2.6.3'
 gem 'bootstrap'
 gem 'rails-controller-testing'
 gem 'faker'
-gem 'pagy'
+gem 'will_paginate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
